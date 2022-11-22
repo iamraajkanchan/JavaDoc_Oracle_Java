@@ -30,7 +30,7 @@ public class MethodReflection {
                 }
                 Class<?>[] methodExceptions = method.getExceptionTypes();
                 for (Class<?> exceptionType : methodExceptions) {
-                    System.out.println(exceptionType.getName());
+                    System.out.println("Exception Name: " + exceptionType.getName());
                     System.out.println("Exception Type: " + Arrays.toString(exceptionType.getDeclaredMethods()));
                 }
                 System.out.println("Return Type: " + method.getReturnType());
