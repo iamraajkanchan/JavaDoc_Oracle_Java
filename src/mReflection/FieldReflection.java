@@ -11,7 +11,7 @@ public class FieldReflection {
     public static void main(String[] args) {
         try {
             Class<?> c = Class.forName("mReflection.FieldReflection");
-            Field[] classFields = c.getFields();
+            Field[] classFields = c.getDeclaredFields();
             System.out.println("---------------------------------------");
             for (Field classField: classFields) {
                 System.out.println("Field Name: " + classField.getName());
