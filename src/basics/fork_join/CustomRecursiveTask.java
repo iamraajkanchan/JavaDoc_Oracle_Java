@@ -34,7 +34,10 @@ public class CustomRecursiveTask extends RecursiveTask<Integer> {
         return dividedTasks;
     }
 
-    private int processing(int[] arr) {
+    /**
+     * Return the Integer non-primitive value because the join() of RecursiveTask<Integer> returns an Integer value.
+     * */
+    private @NotNull Integer processing(int[] arr) {
         return Arrays.stream(arr).filter(a -> a > 10 && a < 27).map(a -> a * 10).sum();
     }
 

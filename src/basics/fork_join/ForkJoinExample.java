@@ -11,13 +11,14 @@ public class ForkJoinExample {
         try {
             ForkJoinPool joinPool = ForkJoinPool.commonPool();
             joinPool.execute(() -> System.out.println("Executing this task in " + Thread.currentThread().getName()));
+            CustomRecursiveAction recursiveAction = new CustomRecursiveAction(tempText);
+            recursiveAction.compute();
+            CustomRecursiveTask recursiveTask = new CustomRecursiveTask(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20});
+            joinPool.execute(recursiveTask);
+            int result = recursiveTask.join();
+            System.out.println("The result of RecursiveTask is " + result);
         } catch (RejectedExecutionException e) {
             e.printStackTrace();
         }
-        CustomRecursiveAction recursiveAction = new CustomRecursiveAction(tempText);
-        recursiveAction.compute();
-        CustomRecursiveTask recursiveTask = new CustomRecursiveTask(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20});
-        System.out.println("The result is - " + recursiveTask.compute());
-        ;
     }
 }
