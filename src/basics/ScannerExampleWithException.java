@@ -84,6 +84,10 @@ public class ScannerExampleWithException {
 
         param.getInputFromUser();
         param.display();
+        throwMyException();
+    }
 
+    public static void throwMyException() {
+        throw new ArithmeticException("This is an arithmetic exception");
     }
 }
