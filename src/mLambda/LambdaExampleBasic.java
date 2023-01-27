@@ -21,8 +21,7 @@ public class LambdaExampleBasic {
     }
 
     public static void main(String[] args) {
-        GenerateRandomString randomString = Scanner::nextLine;
-        handleRandomString(randomString);
+        handleRandomString(Scanner::nextLine);
     }
 
 }
