@@ -1,15 +1,14 @@
 package mLambda;
 
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
-interface GenerateRandomString {
+interface LambdaExampleBasicGenerateRandomString {
     String convertToUpperCase(Scanner sc);
 }
 
 public class LambdaExampleBasic {
 
-    public static void handleRandomString(GenerateRandomString paragraph) {
+    public static void handleRandomString(LambdaExampleBasicGenerateRandomString paragraph) {
         try {
             Scanner sc = new Scanner(System.in);
             System.out.println(paragraph.convertToUpperCase(sc).toUpperCase(Locale.US));
