@@ -1,6 +1,5 @@
 package mCollection;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -19,5 +18,19 @@ public class CollectionBasics {
         oddNumber.add(7);
         System.out.println("LinkedList :: " + oddNumber);
         oddNumber.add(0, 1);
+        int[] integerArray = new int[5];
+        integerArray[0] = 1;
+        integerArray[1] = 2;
+        integerArray[2] = 3;
+        integerArray[3] = 4;
+        StringBuffer myBuffer = new StringBuffer("1,3,4");
+        System.out.println("Original Value for StringBuffer: " + myBuffer);
+        StringBuffer reverseBuffer = myBuffer.reverse();
+        System.out.println("Reversed Value for StringBuffer: " + reverseBuffer);
+
+        StringBuilder myBuilder = new StringBuilder("1,2,3");
+        System.out.println("Original Value for StringBuilder: " + myBuilder);
+        StringBuilder reverseBuilder = myBuilder.reverse();
+        System.out.println("Reversed Value for StringBuilder: " + reverseBuilder);
     }
 }
