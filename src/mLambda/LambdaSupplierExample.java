@@ -11,12 +11,12 @@ public class LambdaSupplierExample {
         System.out.println("Apple 1");
         System.out.println("Color: " + appleSupplier.get().getColor() + ", Weight: " + appleSupplier.get().getWeight() + ", Category: " + appleSupplier.get().getCategory());
         System.out.println("=====================================");
-        LambdaSupplierApple apple2 = appleSupplier.get();
-        apple2.setColor("Green");
-        apple2.setWeight(2.5);
-        apple2.setCategory("Ratnagiri");
+        LambdaSupplierApple apple = appleSupplier.get();
+        apple.setColor("Green");
+        apple.setWeight(2.5);
+        apple.setCategory("Ratnagiri");
         System.out.println("Apple 2");
-        System.out.println("Color: " + apple2.getColor() + ", Weight: " + apple2.getWeight() + ", Category: " + apple2.getCategory());
+        System.out.println("Color: " + apple.getColor() + ", Weight: " + apple.getWeight() + ", Category: " + apple.getCategory());
     }
 }
 
