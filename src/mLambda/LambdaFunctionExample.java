@@ -1,5 +1,6 @@
 package mLambda;
 
+import java.util.Objects;
 import java.util.function.Function;
 
 public class LambdaFunctionExample {
@@ -11,6 +12,14 @@ public class LambdaFunctionExample {
         apple.setCategory("Ratnagiri");
         System.out.println("Apple");
         System.out.println("Color: " + apple.getColor() + ", Weight: " + apple.getWeight() + ", Category: " + apple.getCategory());
+
+        LambdaFunctionApple apple1 = appleFunction.apply("Red");
+        apple1.setWeight(2.25);
+        apple1.setCategory("Kashmiri");
+        System.out.println("Apple");
+        System.out.println("Color: " + apple1.getColor() + ", Weight: " + apple1.getWeight() + ", Category: " + apple1.getCategory());
+        Function<String, String> groupedApples = appleFunction.andThen(LambdaFunctionApple::getCategory);
+        System.out.println(groupedApples);
     }
 
 }
