@@ -1,9 +1,10 @@
 package mCollection;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+import java.io.StringReader;
+import java.util.*;
 
 public class CollectionBasics {
+
     public static void main(String[] args) {
         ArrayList<Integer> evenNumber = new ArrayList<>();
         evenNumber.add(4);
