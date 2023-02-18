@@ -5,7 +5,7 @@ public class SingletonOnThreadNetwork {
     private volatile static SingletonOnThreadNetwork singletonNetwork;
 
     private SingletonOnThreadNetwork(int pool) {
-        this.pool = pool;
+        this.pool = pool; // Note: A constructor cannot access the static properties of its class.
     }
 
     public static SingletonOnThreadNetwork getInstance(int pool) {
@@ -19,9 +19,10 @@ public class SingletonOnThreadNetwork {
         return singletonNetwork;
     }
 
-    public void connectNetwork() {
+    public boolean connectNetwork() {
         System.out.println("Connecting Network...");
-        System.out.println("Attempting to connect " + this.pool + "in few minutes...");
+        System.out.println("Attempting to connect " + this.pool + " pools in few minutes...");
+        return true;
     }
 
 }
