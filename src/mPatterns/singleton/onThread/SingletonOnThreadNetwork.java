@@ -1,16 +1,18 @@
 package mPatterns.singleton.onThread;
 
 public class SingletonOnThreadNetwork {
-    private int pool;
+    private final int pool;
     private volatile static SingletonOnThreadNetwork singletonNetwork;
 
-    private SingletonOnThreadNetwork() {}
+    private SingletonOnThreadNetwork(int pool) {
+        this.pool = pool;
+    }
 
-    public static SingletonOnThreadNetwork getInstance() {
+    public static SingletonOnThreadNetwork getInstance(int pool) {
         if (singletonNetwork == null) {
             synchronized (SingletonOnThreadNetwork.class) {
                 if (singletonNetwork == null) {
-                    singletonNetwork = new SingletonOnThreadNetwork();
+                    singletonNetwork = new SingletonOnThreadNetwork(pool);
                 }
             }
         }
@@ -22,7 +24,4 @@ public class SingletonOnThreadNetwork {
         System.out.println("Attempting to connect " + this.pool + "in few minutes...");
     }
 
-    public void setPool(int pool) {
-        this.pool = pool;
-    }
 }
