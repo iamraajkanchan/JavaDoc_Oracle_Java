@@ -1,10 +1,10 @@
-package mPatterns.singleton;
+package mPatterns.singleton.offThread.forMultipleAccessPoint;
 
 public class SingletonPublicNetworkObserver {
-    private final SingletonNetwork singletonNetwork;
+    private final SingletonForMultipleAccessPointNetwork singletonNetwork;
 
     SingletonPublicNetworkObserver() {
-        this.singletonNetwork = SingletonNetwork.getInstance();
+        this.singletonNetwork = SingletonForMultipleAccessPointNetwork.getInstance();
     }
 
     public void connectPublicNetwork() {
