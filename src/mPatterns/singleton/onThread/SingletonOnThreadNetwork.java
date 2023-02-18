@@ -1,11 +1,17 @@
 package mPatterns.singleton.onThread;
 
 public class SingletonOnThreadNetwork {
-    private static SingletonOnThreadNetwork singletonNetwork;
+    private volatile static SingletonOnThreadNetwork singletonNetwork;
+
+    private SingletonOnThreadNetwork() {}
 
     public SingletonOnThreadNetwork getInstance() {
         if (singletonNetwork == null) {
-            singletonNetwork = new SingletonOnThreadNetwork();
+            synchronized (SingletonOnThreadNetwork.class) {
+                if (singletonNetwork == null) {
+                    singletonNetwork = new SingletonOnThreadNetwork();
+                }
+            }
         }
         return singletonNetwork;
     }
