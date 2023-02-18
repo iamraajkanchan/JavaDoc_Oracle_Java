@@ -10,7 +10,8 @@ public final class SingletonForSingleAccessPointNetwork {
         return singletonNetwork;
     }
 
-    public void connectNetwork() {
+    public boolean connectNetwork() {
         System.out.println("Connecting Network...");
+        return true;
     }
 }
