@@ -1,11 +1,12 @@
 package mPatterns.singleton.onThread;
 
 public class SingletonOnThreadNetwork {
+    private int pool;
     private volatile static SingletonOnThreadNetwork singletonNetwork;
 
     private SingletonOnThreadNetwork() {}
 
-    public SingletonOnThreadNetwork getInstance() {
+    public static SingletonOnThreadNetwork getInstance() {
         if (singletonNetwork == null) {
             synchronized (SingletonOnThreadNetwork.class) {
                 if (singletonNetwork == null) {
@@ -18,5 +19,10 @@ public class SingletonOnThreadNetwork {
 
     public void connectNetwork() {
         System.out.println("Connecting Network...");
+        System.out.println("Attempting to connect " + this.pool + "in few minutes...");
+    }
+
+    public void setPool(int pool) {
+        this.pool = pool;
     }
 }
