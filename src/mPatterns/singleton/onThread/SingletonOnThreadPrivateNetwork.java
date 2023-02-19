@@ -9,10 +9,14 @@ public class SingletonOnThreadPrivateNetwork {
 
     public void connect() {
         singletonThread.start();
-        if (singletonThread.isNetworkConnected) {
-            System.out.println("Private Network Connected");
-        } else {
-            System.out.println("There is some technical issue in Private Network, please try after sometime!");
+        try {
+            if (singletonThread.getConnectedStatus()) {
+                System.out.println("Private Network Connected");
+            } else {
+                System.out.println("There is some technical issue in Private Network, please try after sometime!");
+            }
+        } catch (InterruptedException ie) {
+            ie.getStackTrace();
         }
     }
 }
