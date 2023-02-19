@@ -29,3 +29,14 @@ public class SingletonOnThreadNetworkSimulator {
  *
  * But we still have to figure out why the Public and Private Network is not connected.
  * */
+
+/**
+ * After synchronizing multiple threads.
+ * New Output
+ * Connecting Network...
+ * Attempting to connect 4 pools in few minutes...
+ * Public Network Connected
+ * Connecting Network...
+ * Attempting to connect 4 pools in few minutes...
+ * Private Network Connected
+ * */
