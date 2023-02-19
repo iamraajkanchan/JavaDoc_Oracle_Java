@@ -10,10 +10,14 @@ public class SingletonOnThreadPublicNetwork {
 
     public void connect() {
         singletonThread.start();
-        if (singletonThread.isNetworkConnected) {
-            System.out.println("Public Network Connected");
-        } else {
-            System.out.println("There is some technical issue in Public Network, please try after sometime!");
+        try {
+            if (singletonThread.getConnectedStatus()) {
+                System.out.println("Public Network Connected");
+            } else {
+                System.out.println("There is some technical issue in Public Network, please try after sometime!");
+            }
+        } catch (InterruptedException ie) {
+            ie.getStackTrace();
         }
     }
 }
