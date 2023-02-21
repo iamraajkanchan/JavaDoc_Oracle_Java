@@ -3,7 +3,7 @@ package mPatterns.decorator;
 abstract class DecoratorBeverage {
     public String description = "Unknown description";
 
-    private String getDescription() {
+    public String getDescription() {
         return this.description;
     }
 
