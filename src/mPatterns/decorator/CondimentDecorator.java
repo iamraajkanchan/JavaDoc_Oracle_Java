@@ -1,5 +1,5 @@
 package mPatterns.decorator;
 
 abstract class CondimentDecorator extends DecoratorBeverage {
-    abstract String getDescription();
+    abstract public String getDescription();
 }
