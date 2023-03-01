@@ -1,4 +1,4 @@
 package mPatterns.factory;
 
-public class FactoryFrozenClams {
+public class FactoryFrozenClams implements FactoryClams {
 }
