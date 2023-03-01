@@ -1,4 +1,5 @@
 package mPatterns.factory;
 
-public class FactoryThinCrustDough {
+public class FactoryThinCrustDough implements FactoryDough {
+
 }
