@@ -1,4 +1,4 @@
 package mPatterns.factory;
 
-public class FactoryMarinaraSauce {
+public class FactoryMarinaraSauce implements FactorySauce{
 }
