@@ -1,4 +1,5 @@
 package mPatterns.factory;
 
-public class FactoryClams {
+interface FactoryClams {
+    String toString();
 }
