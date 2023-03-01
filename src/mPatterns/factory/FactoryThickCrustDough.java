@@ -1,4 +1,4 @@
 package mPatterns.factory;
 
-public class FactoryThickCrustDough {
+public class FactoryThickCrustDough implements FactoryDough {
 }
