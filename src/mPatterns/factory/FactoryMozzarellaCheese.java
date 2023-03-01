@@ -1,4 +1,5 @@
 package mPatterns.factory;
 
-public class FactoryMozzarellaCheese {
+public class FactoryMozzarellaCheese implements FactoryCheese {
+
 }
