@@ -1,4 +1,5 @@
 package mPatterns.factory;
 
-public class FactoryFreshClams {
+public class FactoryFreshClams implements FactoryClams {
+
 }
